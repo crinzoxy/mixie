@@ -1,0 +1,411 @@
+
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+ 
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: rgba(251,251,253,.5);
+  flex-direction: column;
+  border-radius: 20px;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* BLUR HEADER */
+
+header {
+    background-image: none;
+    width: 100%;
+    align-items: center;
+    margin-top: auto;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    min-height: 54px;
+    padding-left: 16px;
+    padding-right: 6px;
+    block-size: 44px;
+    backdrop-filter: blur(24px);
+    padding-inline: 16px 6px;
+    padding-inline-start: 16px;
+    padding-inline-end: 6px;
+    border-bottom: 1.9px solid rgba(251,251,253,.5);
+
+
+
+}
+
+/* TEXT SELECTED COLOR */
+
+::selection {
+  background: #d32c90;
+  color: black;
+  text-shadow: none;
+}
+
+/* GIF DISPLAY */
+
+.gif-container {
+  text-align: center;
+  user-select: none;
+}
+.gif-container img {
+  width: 400px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 5px;
+}
+
+/* H1 TEXT */
+
+h1 {
+  /*text-align: center;*/
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: -2.8px;
+  display: block;
+  pointer-events: none;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  unicode-bidi: isolate;
+  justify-content: center;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  padding: 30px;
+  font-family: SF Pro Text, Helvetica Neue, sans-serif;
+  pointer-events: none;
+}
+.f {
+  color: #c01e8a;
+  font-family: SF Pro Text, Helvetica Neue, sans-serif;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.t {
+  color: #6b12cf;
+  font-family: SF Pro Text, Helvetica Neue, sans-serif;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* LOGO HEX */
+
+.logo {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 2em;
+    user-select: none;
+}
+.logo:hover {
+  color:#e01890;
+}
+.with-logo {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+  user-select: none;
+}
+.wiht-logo:hover {
+color:#c01e8a;
+}
+.main h1{
+    text-align: center;
+    padding: 100px ;
+
+}
+
+/* TITLE */
+
+.title {
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+/* CSS button design */
+.button {
+  background-color: #000;
+  border: 1px solid transparent;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  min-width: 146px;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: SF Pro Text, Helvetica Neue, sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: .75rem 1.8rem;
+  block-size: 44px;
+  text-align: center;
+  text-decoration: none #363535 solid;
+  text-decoration-thickness: auto;
+  display: block;
+  margin: auto;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 4, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
+.button:hover {
+  background-color: rgb(80, 78, 78);
+}
+
+.button:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: .20rem 1.5rem;
+  }
+}
+/* LINE */
+.line {
+  position: absolute;
+  top: 28.3%; /* Position the line in the middle of the screen */
+  width: 100%; /* Full width */
+  height: 3.5px; /* Thickness of the line */
+  background-color: #707070; /* Color of the line */
+  transform: translateY(-50%); /* Adjust line exactly in the center */
+}
+.dino {
+  height: 200px;
+  justify-content: center;
+}
+
+
+.neon{
+  text-align: center;
+  user-select: none;
+}
+/* Base styling for the neon link (no glow initially) */
+.neon .instagram{
+                 /* Adjust font size */
+  color: #000;                /* Neon color (cyan) */
+  text-decoration: none;         /* Remove underline */
+  transition: 0.4s;              /* Smooth transition */
+}
+
+/* Neon glow effect when the link is hovered or focused */
+.neon .instagram:hover, 
+.neon .instagram:focus {
+  color:rgb(0, 0, 0);                /* Keep the neon color */
+  text-shadow: 
+    0 0 1px #e09006,             /* Inner glow */
+    0 0 2px #e09006,            /* Outer glow */
+    0 0 3px #e09006,            /* Farther outer glow */
+    0 0 4px #e09006,            /* Even more glow */
+    0 0 16px #e09006, 
+    0 0 14px #e09006,
+    0 0 0px #e09006;
+}
+.neon .discord{
+  /* Adjust font size */
+color: #000;                /* Neon color (cyan) */
+text-decoration: none;         /* Remove underline */
+transition: 0.4s;              /* Smooth transition */
+}
+.neon .discord:hover, 
+.neon .discord:focus {
+  color:rgb(0, 0, 0);                /* Keep the neon color */
+  text-shadow: 
+    0 0 1px #5112cf,             /* Inner glow */
+    0 0 2px #5112cf,            /* Outer glow */
+    0 0 3px #5112cf,            /* Farther outer glow */
+    0 0 4px #5112cf,            /* Even more glow */
+    0 0 16px #5112cf, 
+    0 0 14px #5112cf,
+    0 0 0px #5112cf;
+}
+
+.neon .steam{
+  /* Adjust font size */
+color: #000;                /* Neon color (cyan) */
+text-decoration: none;         /* Remove underline */
+transition: 0.4s;              /* Smooth transition */
+}
+.neon .steam:hover, 
+.neon .steam:focus {
+  color:rgb(0, 0, 0);                /* Keep the neon color */
+  text-shadow: 
+    0 0 1px rgb(5, 64, 122),             /* Inner glow */
+    0 0 2px   rgb(5, 64, 122) ,            /* Outer glow */
+    0 0 3px   rgb(5, 64, 122)   ,            /* Farther outer glow */
+    0 0 4px rgb(5, 64, 122),            /* Even more glow */
+    0 0 16px rgb(5, 64, 122), 
+    0 0 14px rgb(5, 64, 122),
+    0 0 0px rgb(5, 64, 122);
+}
+
+.neon .github{
+  /* Adjust font size */
+color: #000;                /* Neon color (cyan) */
+text-decoration: none;         /* Remove underline */
+transition: 0.4s;              /* Smooth transition */
+}
+.neon .github:hover, 
+.neon .github:focus {
+  color:rgb(0, 0, 0);                /* Keep the neon color */
+  text-shadow: 
+    0 0 1px gray,             /* Inner glow */
+    0 0 2px gray,            /* Outer glow */
+    0 0 3px gray,            /* Farther outer glow */
+    0 0 4px gray,            /* Even more glow */
+    0 0 16px gray, 
+    0 0 14px gray,
+    0 0 17px gray;
+}
+
+.neon .chess{
+  /* Adjust font size */
+color: #000;                /* Neon color (cyan) */
+text-decoration: none;         /* Remove underline */
+transition: 0.4s;              /* Smooth transition */
+}
+.neon .chess:hover, 
+.neon .chess:focus {
+  color:rgb(0, 0, 0);                /* Keep the neon color */
+  text-shadow: 
+    0 0 1px rgb(18, 194, 18),             /* Inner glow */
+    0 0 2px rgb(18, 194, 18),            /* Outer glow */
+    0 0 3px rgb(18, 194, 18),            /* Farther outer glow */
+    0 0 4px rgb(18, 194, 18),            /* Even more glow */
+    0 0 16px rgb(18, 194, 18), 
+    0 0 14px rgb(18, 194, 18),
+    0 0 17px rgb(18, 194, 18);
+}
+
+
+
+/* discord */
+.discord {
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+/* instagram */
+.instagram {
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+/* Github */
+.github {
+  color: #000;
+  padding: 10px;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+/* steam */
+.steam {
+  color: #000;
+  padding: 10px;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+/* Chess */
+.chess {
+  color: #000;
+  padding: 10px;
+  font-size: 30px;
+  text-decoration: none;
+}
+/* HELP */
+.helper{
+  color: #575555;
+  text-decoration: none;
+  user-select: none;
+}
+.helper:hover{
+  color: #000 ;
+}
+.m{
+  user-select: none;
+}
+/* Footer */
+
+footer {
+  position:relative; /* Ensure that children are positioned relative to the footer */
+  background-color: #000000;
+  color: #c01e8a;
+  padding: 2%;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 90px; /* Adjust as needed */ 
+  overflow: hidden; /* Prevent overflow of runner */
+
+}
+.theline{
+  position: absolute;
+  top: 0; /* Position it at the top of the footer */
+  left: 0;
+  width: 100%;
+  height: 6px; /* Thickness of the line */
+  background: rgba(201, 53, 152, 0.5); /* Light color with some transparency */
+  backdrop-filter: blur(5px); /* Apply blur effect */
+  z-index: 1; /* Ensure it appears above the background but below other content */
+}
+.a-footer {
+  color: #2895c1;
+}
+.a-footer:hover{
+  color: #00a5e7;
+}
+.img {
+  height: 30px;
+  text-align: center;
+}
+
+@keyframes run {
+  0% {
+      left: -40px; /* Start off-screen */
+  }
+  100% {
+      left: 100%; /* Move to the right off-screen */
+  }
+}
+.m {
+  color: white;
+}
