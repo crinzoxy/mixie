@@ -378,7 +378,7 @@ footer {
 
 }
 .theline{
-  position: absolute;
+  position: fixed;
   top: 0; /* Position it at the top of the footer */
   left: 0;
   width: 100%;
